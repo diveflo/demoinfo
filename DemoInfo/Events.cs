@@ -78,54 +78,54 @@ namespace DemoInfo
 
 	public class PlayerTeamEventArgs : EventArgs
 	{
-		public Player Swapped { get; internal set; }
+		public Player Swapped { get; set; }
 
-		public Team NewTeam { get; internal set; }
+		public Team NewTeam { get; set; }
 
-		public Team OldTeam { get; internal set; }
+		public Team OldTeam { get; set; }
 
-		public bool Silent { get; internal set; }
+		public bool Silent { get; set; }
 
-		public bool IsBot { get; internal set; }
+		public bool IsBot { get; set; }
 	}
 
 	public class PlayerKilledEventArgs : EventArgs
 	{
-		public Equipment Weapon { get; internal set; }
+		public Equipment Weapon { get; set; }
 
 		[Obsolete("Use \"Victim\" instead. This will be removed soon™", false)]
 		public Player DeathPerson { get { return Victim; } }
 
-		public Player Victim { get; internal set; }
+		public Player Victim { get; set; }
 
-		public Player Killer { get; internal set; }
+		public Player Killer { get; set; }
 
-		public Player Assister { get; internal set; }
+		public Player Assister { get; set; }
 
-		public int PenetratedObjects { get; internal set; }
+		public int PenetratedObjects { get; set; }
 
-		public bool Headshot { get; internal set; }
+		public bool Headshot { get; set; }
 
-	    public bool AssistedFlash { get; internal set; }
+	    public bool AssistedFlash { get; set; }
     }
 
 	public class BotTakeOverEventArgs : EventArgs
 	{
-		public Player Taker { get; internal set; }
+		public Player Taker { get; set; }
 	}
 
 	public class WeaponFiredEventArgs : EventArgs
 	{
-		public Equipment Weapon { get; internal set; }
+		public Equipment Weapon { get; set; }
 
-		public Player Shooter { get; internal set; }
+		public Player Shooter { get; set; }
 	}
 
 	public class NadeEventArgs : EventArgs
 	{
-		public Vector Position { get; internal set; }
-		public EquipmentElement NadeType { get; internal set; }
-		public Player ThrownBy { get; internal set; }
+		public Vector Position { get; set; }
+		public EquipmentElement NadeType { get; set; }
+		public Player ThrownBy { get; set; }
 
 		internal NadeEventArgs()
 		{
@@ -162,7 +162,7 @@ namespace DemoInfo
 	public class FlashEventArgs : NadeEventArgs
 	{
 		//previous blind implementation
-		public Player[] FlashedPlayers { get; internal set; }
+		public Player[] FlashedPlayers { get; set; }
 		//
 
 		public FlashEventArgs() : base(EquipmentElement.Flash)
