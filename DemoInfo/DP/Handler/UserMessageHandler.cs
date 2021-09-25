@@ -1,9 +1,6 @@
-﻿using System;
-using DemoInfo.Messages;
-
-namespace DemoInfo.DP.Handler
+﻿namespace DemoInfo.DP.Handler
 {
-	#if SLOW_PROTOBUF
+#if SLOW_PROTOBUF
 	public class UserMessageHandler : IMessageParser
 	{
 		public bool TryApplyMessage(ProtoBuf.IExtensible message, DemoParser parser)
@@ -23,5 +20,5 @@ namespace DemoInfo.DP.Handler
 
 		public int Priority { get { return 0; } }
 	}
-	#endif
+#endif
 }

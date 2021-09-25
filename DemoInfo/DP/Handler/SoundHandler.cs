@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace DemoInfo
+﻿namespace DemoInfo
 {
-	public class SoundHandler
-	{
-		public SoundHandler()
-		{
-		}
-	}
+    public class SoundHandler
+    {
+        public SoundHandler()
+        {
+        }
+    }
 }
 
